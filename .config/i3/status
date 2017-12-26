@@ -1,0 +1,44 @@
+### i3bar.clock.conf ###
+general {
+    output_format = "i3bar"
+    colors = true
+    interval = 5
+}
+
+order += "diskdata"
+order += "volume_status"
+order += "wifi"
+order += "battery_level"
+order += "time"
+
+battery_level {
+    format="🔋: {percent}% ({time_remaining})"
+}
+
+diskdata {
+    format = "{free}GB / {total_space}GB"
+}
+
+time {
+    format = "%Y-%m-%d %H:%M:%S"
+}
+
+# Set thresholds to rainbow colors
+volume_status {
+    thresholds = [
+        (0, "#FF0000"),
+        (10, "#E2571E"),
+        (20, "#FF7F00"),
+        (30, "#FFFF00"),
+        (40, "#00FF00"),
+        (50, "#96BF33"),
+        (60, "#0000FF"),
+        (70, "#4B0082"),
+        (80, "#8B00FF"),
+        (90, "#FFFFFF")
+    ]
+}
+
+wifi {
+    format = "🌍: {ip} ({ssid})|🌍: down"
+}
