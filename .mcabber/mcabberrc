@@ -1,0 +1,79 @@
+# basic data
+set default_server = jabber.org
+set server = jabber.org
+set username = trybnetic
+set jid = trybnetic@jabber.org
+
+
+set nickname = Trybnetic
+set muc_auto_whois = 1
+
+# Language
+set lang = de
+
+# Priority of the clients
+set priority = 1
+
+# encryption to server
+set ssl = 1
+
+# mcabber Version < 0.10
+#set ssl_verify 0
+# mcabber Version >= 0.10
+set ssl_ignore_checks = 1
+
+# Logs
+set logging  = 1
+set load_logs = 1
+set logging_dir = ~/.mcabber/logs/
+set log_muc_conf = 1
+
+# Store unread messages
+set statefile = ~/.mcabber/mcabber.state
+
+# Status
+set message = Unique message status
+set message_avail     = I'm available
+set message_free      = I'm free for chat
+set message_dnd       = Please do not disturb
+set message_notavail  = I'm not available
+set message_away      = I'm away
+
+# OTR
+set otr = 1
+otrpolicy default opportunistic
+set otr_dir = "~/.mcabber/otr/"
+
+# keybindings
+
+## close with f2
+bind 266 = quit
+## Crtl + Up
+bind 566 = roster up
+## Crtl + Down
+bind 525 = roster down
+
+# MUC
+
+# Set 'muc_print_status' to see status changes in MUC rooms:
+# 1: (none)       do not display joining/leaving members
+# 2: (in_and_out) display joining/leaving members
+# 3: (all)        display joining/leaving members and member status changes
+# (default: in_and_out)
+set muc_print_status = 2
+
+# Set 'muc_auto_whois' to 1 if you want to call /room whois each time
+# somebody joins a room. (default: 0)
+set muc_auto_whois = 0
+
+# Set 'muc_print_jid' to see real jid in non-anonynmous room when somebody
+# joins. This setting will be ignored when auto_whois is enabled.
+# 0: only nick (don't print jid even if available)
+# 1: nick and bare jid
+# 2: nick and full jid with resource
+set muc_print_jid = 0
+
+# Set 'muc_completion_suffix' if you want mcabber to append a string to
+# suggested nicknames (only at the beginning of a line), like ":" or ",".
+# (Default: none)
+set muc_completion_suffix = ": "
