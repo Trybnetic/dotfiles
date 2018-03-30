@@ -15,3 +15,6 @@ export LANG=en_US.UTF-8
 
 # Start neofetch at the beginning of a new shell
 neofetch
+
+# added by Miniconda3 installer
+export PATH="/home/trybnetic/miniconda3/bin:$PATH"
