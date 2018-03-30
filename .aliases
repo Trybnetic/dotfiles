@@ -1,0 +1,13 @@
+# Bildschirmzeug
+alias dock='xrandr --auto --output HDMI3 --mode 1280x1024 --left-of LVDS1'
+alias workl='xrandr --auto --output VGA1 --mode 1920x1080 --left-of LVDS1'
+alias workr='xrandr --auto --output VGA1 --mode 1920x1080 --right-of LVDS1'
+alias home=' xrandr --output DP2 --mode 1920x1080 --right-of LVDS1'
+
+
+# Sonstiges
+alias vpn='sudo openconnect --no-system-trust --cafile /etc/ssl/certs/Deutsche_Telekom_Root_CA_2.pem https://ras.uni-tuebingen.de'
+
+alias idea='sh ~/bin/idea/bin/idea.sh'
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
