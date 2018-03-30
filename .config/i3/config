@@ -7,8 +7,9 @@ exec --no-startip-id redshift
 # General
 # =======
 set $mod Mod1
-
 font pango:monospace 8
+
+for_window [class="^.*"] border pixel 3
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -115,7 +116,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
 
 # Workspaces
 # ----------
