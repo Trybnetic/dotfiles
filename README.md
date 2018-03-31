@@ -12,6 +12,11 @@ They are tracked in the way [@joaofcosta](https://github.com/joaofcosta/) sugges
 [his dotfile repo](https://github.com/joaofcosta/dotfiles), except that I add files by hand 
 and not via script.
 
+## Screenshot
+
+![screenshot](/.github/screenshot.png)
+
+
 ## Load this dotfiles
 The following steps should get you a copy of this repository with the config files in the right folders:
 
