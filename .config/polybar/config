@@ -1,0 +1,154 @@
+[colors]
+background          = #4D002b36
+foreground          = #657b83
+border              = #00000000
+line                = #268bd2
+alert               = #dc322f
+inactive            = #586e75
+yellow              = #b58900
+green               = #859900
+cyan                = #2aa198
+violet              = #6c71c4
+magenta             = #d33682
+orange              = #cb4b16
+
+[bar/default]
+monitor             = ${env:MONITOR:}
+width               = 100%
+height              = 3%
+font-0              = Ubuntu Mono:size=13;1
+font-1              = UbuntuMono Nerd Font:size=13;2
+font-2              = Weather Icons:size=11;3
+background          = ${colors.background}
+foreground          = ${colors.foreground}
+border-color        = ${colors.border}
+line-size           = 3
+padding-left        = 1
+padding-right       = 1
+module-margin       = 1
+modules-left        = i3
+modules-center      = date
+modules-right       = weather wlan volume battery
+scroll-up           = i3wm-wsnext
+scroll-down         = i3wm-wsprev
+
+[module/i3]
+type                        = internal/i3
+pin-workspaces              = true
+index-sort                  = true
+enable-click                = true
+enable-scroll               = true
+wrapping-scroll             = true
+reverse-scroll              = true
+fuzzy-match                 = false
+format                      = <label-state> <label-mode>
+label-mode                  = %mode%
+label-focused               = %name%
+label-focused-foreground    = ${colors.foreground}
+label-focused-background    = ${colors.background}
+label-focused-underline     = ${colors.line}
+label-focused-padding       = 1
+label-unfocused             = %name%
+label-unfocused-padding     = 1
+label-visible               = %name%
+label-visible-underline     = ${colors.inactive}
+label-visible-padding       = 1
+label-urgent                = %name%
+label-urgent-foreground     = ${colors.alert}
+label-urgent-underline      = ${colors.alert}
+label-urgent-padding        = 1
+
+[module/weather]
+type                        = custom/script
+exec                        = $HOME/.config/polybar/modules/weather.sh
+interval                    = 600
+label-font                  = 3
+
+[module/wlan]
+type = internal/network
+interface = wlp1s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = #9f78e1
+format-disconnected-underline = ${self.format-connected-underline}
+
+label-connected = %essid%
+label-disconnected =   disconnected
+label-disconnected-foreground = ${colors.foreground}
+
+ramp-signal-0 = 😱
+ramp-signal-1 = 😠
+ramp-signal-2 = 😒
+ramp-signal-3 = 😊
+ramp-signal-4 = 😃
+ramp-signal-5 = 😈
+ramp-signal-foreground = ${colors.green}
+
+
+[module/wired-network]
+type                        = internal/network
+interface                   = eth0
+interval                    = 3
+unknown-as-up               = false
+format-connected            = <label-connected>
+label-connected             = 
+
+[module/wireless-network]
+type                        = internal/network
+interface                   = wlan0
+interval                    = 3
+ping-interval               = 3
+unknown-as-up               = false
+format-connected            = <label-connected>
+label-connected             = 
+
+[module/volume]
+type                        = internal/volume
+format-volume               = <ramp-volume>
+label-muted                 = 
+label-muted-foreground      = ${colors.inactive}
+ramp-volume-0               =  
+ramp-volume-1               =  
+ramp-volume-2               =  
+
+[module/battery]
+type                        = internal/battery
+battery                     = BAT0
+adapter                     = AC
+full-at                     = 98
+poll-interval               = 5
+time-format                 = %H:%M
+format-charging             = <animation-charging><label-charging>
+format-full                 = <ramp-capacity><label-full>
+format-full-foreground      = ${colors.green}
+format-discharging          = <ramp-capacity><label-discharging>
+label-charging              = %percentage%% (%time%)
+label-charging-foreground   = ${colors.inactive}
+label-discharging           = %percentage%% (%time%)
+label-discharging-foreground= ${colors.inactive}
+label-full                  = 
+label-full-padding          = 1
+label-full-foreground       = ${colors.foreground}
+ramp-capacity-0             = 
+ramp-capacity-1             = 
+ramp-capacity-2             = 
+ramp-capacity-3             = 
+ramp-capacity-4             = 
+ramp-capacity-padding       = 1
+ramp-capacity-0-foreground  = ${colors.alert}
+ramp-capacity-2-foreground  = ${colors.yellow}
+animation-charging-0        = 
+animation-charging-1        = 
+animation-charging-2        = 
+animation-charging-3        = 
+animation-charging-4        = 
+animation-charging-padding  = 1
+animation-charging-framerate= 1500
+
+[module/date]
+type                        = internal/date
+interval                    = 1
+time                        = %d.%m.%Y %H:%M:%S
+label                       = %time%
+#label-underline             = ${colors.orange}

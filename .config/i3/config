@@ -4,6 +4,8 @@ exec --no-startup-id feh --bg-scale ~/.config/i3/img/wallpaper.png
 # init redshift
 exec --no-startip-id redshift
 
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # General
 # =======
 set $mod Mod1
@@ -123,16 +125,16 @@ bindsym $mod+r mode "resize"
 # ----------
 
 # Define workspace names
-set $workspace1 "1: >_"
-set $workspace2 "2: 🌍"
-set $workspace3 "3: ✉ "
-set $workspace4 "4: 💬 "
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
 set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
-set $workspace0 "10: ♫"
+set $workspace0 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -161,6 +163,6 @@ bindsym $mod+Shift+0 move container to workspace $workspace0
 
 # Status bar
 # ----------
-bar {
-        status_command py3status -c ~/.config/i3/status
-}
+#bar {
+#        status_command py3status -c ~/.config/i3/status
+#}
