@@ -1,4 +1,11 @@
-# My configuration files
+```
+  __  __                           __ _                       _   _                 __ _ _           
+ |  \/  |_   _     ___ ___  _ __  / _(_) __ _ _   _ _ __ __ _| |_(_) ___  _ __     / _(_) | ___  ___ 
+ | |\/| | | | |   / __/ _ \| '_ \| |_| |/ _` | | | | '__/ _` | __| |/ _ \| '_ \   | |_| | |/ _ \/ __|
+ | |  | | |_| |  | (_| (_) | | | |  _| | (_| | |_| | | | (_| | |_| | (_) | | | |  |  _| | |  __/\__ \
+ |_|  |_|\__, |   \___\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__|_|\___/|_| |_|  |_| |_|_|\___||___/
+         |___/                          |___/                                                        
+```
 
 This repository contains the configuration files for some of the programs I use on my machine. 
 They are tracked in the way [@joaofcosta](https://github.com/joaofcosta/) suggests in 
