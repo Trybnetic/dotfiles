@@ -13,7 +13,7 @@ They are tracked in the way [@joaofcosta](https://github.com/joaofcosta/) sugges
 [his dotfile repo](https://github.com/joaofcosta/dotfiles), except that I add files by hand 
 and not via script.
 
-A lot of inspiration of my configuration derived from 
+A lot of inspiration for my configuration derived from 
 [r/unixporn](https://www.reddit.com/r/unixporn/). Especially, 
 [Lars Herbach](https://github.com/braindump)'s 
 [dotfiles](https://github.com/braindump/dotfiles/) were a great help! 
