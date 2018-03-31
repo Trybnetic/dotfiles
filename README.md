@@ -6,11 +6,17 @@
  |_|  |_|\__, |   \___\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__|_|\___/|_| |_|  |_| |_|_|\___||___/
          |___/                          |___/                                                        
 ```
+[![license](https://img.shields.io/github/license/Trybnetic/dotfiles.svg)](https://github.com/Trybnetic/dotfiles/blob/master/LICENSE.txt)
 
 This repository contains the configuration files for some of the programs I use on my machine. 
 They are tracked in the way [@joaofcosta](https://github.com/joaofcosta/) suggests in 
 [his dotfile repo](https://github.com/joaofcosta/dotfiles), except that I add files by hand 
 and not via script.
+
+A lot of inspiration of my configuration derived from 
+[r/unixporn](https://www.reddit.com/r/unixporn/). Especially, 
+[Lars Herbach](https://github.com/braindump)'s 
+[dotfiles](https://github.com/braindump/dotfiles/) were a great help! 
 
 ## Screenshot
 
