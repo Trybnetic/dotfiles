@@ -8,6 +8,8 @@ set jid = trybnetic@jabber.org
 set nickname = Trybnetic
 set muc_auto_whois = 1
 
+set color_background   = transparent
+
 # Language
 set lang = de
 
@@ -49,9 +51,9 @@ set otr_dir = "~/.mcabber/otr/"
 ## close with f2
 bind 266 = quit
 ## Crtl + Up
-bind 566 = roster up
+bind 530 = roster up
 ## Crtl + Down
-bind 525 = roster down
+bind 514 = roster down
 
 # MUC
 
