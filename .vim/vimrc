@@ -6,6 +6,8 @@
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'jalvesaq/Nvim-R'
+Plug 'vim-latex/vim-latex'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""
@@ -42,6 +44,16 @@ set autoread
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" yank to clipboard
+if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
+
 
 """""""""""""""""""""""""""""""""""""""""""
 "
@@ -107,11 +119,6 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-
-" Properly disable sound on errors on MacVim
-if has("gui_macvim")
-    autocmd GUIEnter * set vb t_vb=
-endif
 
 """"""""""""""""""""""""""""""""""""""""""""
 "
@@ -231,6 +238,29 @@ cnoremap <C-E>		<End>
 cnoremap <C-K>		<C-U>
 cnoremap <C-P>      <Up>
 cnoremap <C-N>      <Down>
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""
+"
+" Vim-LaTeX
+"
+""""""""""""""""""""""""""""""""""""""""""""
+
+set shellslash
+au BufEnter *.tex set autowrite
+
+autocmd FileType tex map <C-r> :call Tex_RunLaTeX()
+
+
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_BibtexFlavor = 'biber'
+let g:Tex_MultipleCompileFormats='pdf, bib, pdf'
+let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
+let g:Tex_GotoError = 0
+let g:Tex_ViewRule_pdf = 'evince'
+
 
 """"""""""""""""""""""""""""""""""""""""""""
 "
