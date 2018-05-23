@@ -22,8 +22,24 @@ A lot of inspiration for my configuration derived from
 
 ![screenshot](/.github/screenshot.png)
 
+## Installation
 
-## Load this dotfiles
+### Install packages
+
+The following packages are required for this setup and can be installed via pacman:
+
+```
+pacman -Su xorg i3-gaps gvim git polybar zsh yaourt rofi termite neofetch feh qutebrowser compton
+```
+
+and the following packages from the [AUR](https://aur.archlinux.org/):
+
+```
+yaourt betterlockscreen
+```
+
+### Load this dotfiles
+
 The following steps should get you a copy of this repository with the config files in the right folders:
 
 1. Create a new bare git repository in your `$HOME` folder.
